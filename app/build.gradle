@@ -18,7 +18,7 @@ android {
         }
 
     }
-    compileOptions{
+    compileOptions {
         sourceCompatibility org.gradle.api.JavaVersion.VERSION_1_8
         targetCompatibility org.gradle.api.JavaVersion.VERSION_1_8
     }
@@ -53,5 +53,5 @@ dependencies {
     //网络请求okhttp3
     implementation 'com.squareup.okhttp3:okhttp:3.14.0'
     //日志的拦截器
-    implementation'com.squareup.okhttp3:logging-interceptor:3.14.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.0'
 }
