@@ -2,9 +2,12 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
+import com.example.myapplication.Activity.LoginActivity;
 import com.example.myapplication.Base.BaseInterceptor;
 import com.example.myapplication.Base.KclU17BaseModel;
 import com.example.myapplication.manager.KclU17DetectListModel;
@@ -26,7 +29,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final static String TAG = "MainActivity";
 //    private static Disposable mDisposable;
@@ -47,8 +50,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.jump_button).setOnClickListener(this);
+
 //        KclU17BaseModel baseModel = new KclU17BaseModel<KclU17TestModel>();
-        Log.e(TAG, "onCreate");
+//        Log.e(TAG, "onCreate");
 //        appVersionPresenter.getAppVersion("6.0", "android");
 //        appVersionPresenter.onCreate();
 //        appVersionPresenter.attachView();
@@ -56,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 //        doRequestU17RxRetrofit();
 //        doRequestByRetrofit();
 //        doRequestByRxRetrofit();
-        doRequestU17FavRecommendData();
+//        doRequestU17FavRecommendData();
 
     }
 
@@ -222,6 +228,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(TAG, "Throwable:"+t);
             }
         });
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        if (v.getId() == R.id.jump_button) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
 
     }
 }
