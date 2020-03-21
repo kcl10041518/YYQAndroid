@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.example.myapplication.Activity.Learn20200321.BannerViewPager
+        android:id="@+id/banner_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="#660000"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/banner_describe_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="广告的描述"
+            android:textSize="12dp" />
+        <LinearLayout
+            android:id="@+id/banner_dot_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
